@@ -25,6 +25,7 @@
         margin-left: var(--tamanho_menu_tela_pequena);
     }
 
+
     .menu_lateral i {
         padding: 10px;
     }
@@ -38,5 +39,47 @@
     div.table {
         overflow-x: scroll;
     }
+
+    .menu_lateral {
+        display: none;
+    }
+
+    main {
+        margin-left: 0px;
+    }
+
+    main .card {
+        margin: auto;
+        width:94vw;
+        margin-bottom: 20px;
+    }
+
+    .formulariobg {
+        width:100vw;
+        margin: auto;
+        
+    }
+
+    /* CONFIGURAÇÕES DO MENU MOBILE */
+        .menu_mobile {
+            height: 60px;
+            display: flex;
+            justify-content: right;
+            padding-right: 40px;
+            align-items: center;
+            background-color: var(--menu);
+            color: white;
+        }
+
+        .menu_mobile .open{
+            display: block;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+        .menu_mobile .close {
+            font-size: 2.5rem;
+            cursor: pointer;
+            display: none;
+        }
     
   }
