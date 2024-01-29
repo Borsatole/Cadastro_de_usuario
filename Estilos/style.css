@@ -139,7 +139,7 @@ table {
 }
 
 .menu_mobile_lista {
-    display: flex;
+    display: none;
     width: 100%;
     justify-content: center;
     background-color: var(--menu);
@@ -148,13 +148,12 @@ table {
 }
 
 .menu_mobile_lista ul {
-    
     list-style: none;
     width: 100%;
 }
 
 .menu_mobile_lista ul li {
-    padding: 10px 30%;
+    padding: 10px;
     font-size: 1.5rem;
     list-style: none;
     /* border: 1px solid white; */
