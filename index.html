@@ -16,6 +16,20 @@
 </head>
 
 <body>
+    <div class="formulariobg">
+        
+        <form action="">
+
+            <div class="btn_fechar_formulario" onclick="fechar_modal()">
+                <i class='bx bx-x'></i>
+            </div>
+
+            
+
+        </form>
+
+    </div>
+
     <nav class="menu_lateral">
 
         <div>
@@ -37,6 +51,8 @@
     </nav>
 
     <main>
+
+        
         <section>
             
             <div class="card">
@@ -53,7 +69,10 @@
             </div>
         </section>
 
-        <button class="btn_add"><i class='bx bxs-user' ></i>Adicionar usuario</button>
+        
+
+        <button class="btn_add" onclick="createusuario()"><i class='bx bxs-user' ></i>Adicionar usuario</button>
+
 
         <div class="table">
             <table class="table table-striped">
@@ -141,6 +160,8 @@
         </div>
 
     </main>
+
+    <script src="script/app.js"></script>
 
 </body>
 </html>

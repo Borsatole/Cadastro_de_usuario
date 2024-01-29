@@ -8,14 +8,19 @@
     .menu_lateral {
         transition: 0.2s;
         padding: 0px;
-        max-width: 70px;
+        width: var(--tamanho_menu_tela_pequena);
         align-items: center;
     }
 
 
     main .card {
-        width: calc(100vw - 90px);
+        width: calc(100vw - var(--tamanho_menu_tela_pequena));
         
+    }
+
+    .formulariobg {
+        width: calc(100vw - var(--tamanho_menu_tela_pequena));
+        margin-left: var(--tamanho_menu_tela_pequena);
     }
 
     .menu_lateral i {
@@ -31,6 +36,5 @@
     div.table {
         overflow-x: scroll;
     }
-    /* .id,.servidor,.painel, .status{display: none;} */
     
   }
