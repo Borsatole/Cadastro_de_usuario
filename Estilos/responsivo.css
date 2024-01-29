@@ -14,7 +14,9 @@
 
 
     main .card {
-        width: calc(100vw - var(--tamanho_menu_tela_pequena));
+        margin: auto;
+        margin-bottom: 20px;
+        width: calc(96vw - var(--tamanho_menu_tela_pequena));
         
     }
 
