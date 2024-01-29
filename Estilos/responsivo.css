@@ -1,0 +1,36 @@
+/* RESPONSIVIDADE DO MENU LATERAL*/
+
+@media (max-width: 1446px) {
+    main {
+        margin-left: 70px;
+    }
+
+    .menu_lateral {
+        transition: 0.2s;
+        padding: 0px;
+        max-width: 70px;
+        align-items: center;
+    }
+
+
+    main .card {
+        width: calc(100vw - 90px);
+        
+    }
+
+    .menu_lateral i {
+        padding: 10px;
+    }
+
+    .menu_links span {display: none;}
+    }
+
+  @media (max-width: 768px) {
+
+    /* Controle de colunas na tabela */
+    div.table {
+        overflow-x: scroll;
+    }
+    /* .id,.servidor,.painel, .status{display: none;} */
+    
+  }
