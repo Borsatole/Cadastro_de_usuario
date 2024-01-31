@@ -33,6 +33,9 @@ let btn_fechar_modal = document.querySelector('.btn_fechar_formulario');
 function createusuario() {
     modal_cadastro_de_usuario.style.display = "flex";
     console.log("botão adicionar usuario - foi clicado");
+
+    // Abaixo eu coloquei a função para fechar o menu! havia um bug quando ele eo formulario tavam aberto
+    menu_toggle_fechar ();
 }
 
 function fechar_modal() {

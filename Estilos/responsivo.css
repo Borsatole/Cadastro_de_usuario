@@ -13,7 +13,7 @@
     }
 
 
-    main .card {
+    main .cards {
         margin: auto;
         margin-bottom: 20px;
         width: calc(96vw - var(--tamanho_menu_tela_pequena));
@@ -55,7 +55,7 @@
     }
 
     .formulariobg {
-        width:100vw;
+        width:97vw;
         margin: auto;
         
     }
@@ -81,5 +81,27 @@
             cursor: pointer;
             display: none;
         }
+
+        /* card */
+
+        main .cards {
+            height: auto;
+            flex-direction: column;
+            width: 94%;
+            background-color: transparent;
+            height: auto;
+        }
+
+        main .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            width: 100%;
+            padding: 10px;
+            
+        }
+
+        
     
   }

@@ -34,15 +34,39 @@ main {
 
 
 
-main .card {
+main .cards {
+    display: flex;
+    gap: 5px;
     padding: 10px;
     margin: auto;
     width: calc(98vw - var(--tamanho_menu_tela_grande));
     height: 250px;
     border-radius: 20px;
-    background-color: rgba(128, 128, 128, 0.262);
+    background-color: #80808043;
     color: blue;
     margin-bottom: 20px;
+}
+
+main .card {
+    background-color: var(--menu);
+    font-family: var(--font1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--menufont1);
+    border-radius: 20px;
+    width: 250px;
+    padding: 10px;
+    box-shadow: 2px 3px 5px #000000ad;
+}
+
+main .card h2{
+    font-size: 1.0rem;
+}
+
+main .card span{
+    font-family: var(--font3);
+    font-size: 6.0rem;
 }
 
 /* BOTÃO DE ADICIONAR USUARIO */
