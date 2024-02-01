@@ -4,6 +4,45 @@ let btn_menu_abrir = document.querySelector('.open');
 let btn_menu_fechar = document.querySelector('.close');
 let lista_menu = document.querySelector('.menu_mobile_lista');
 
+// Codigo Adicionar Usuario
+
+// Pega a Tabela
+let listagem_usuarios = document.getElementById('tabela_usuarios');
+// Cria o elemento tr
+const linha = document.createElement("tr");
+
+const coluna_id = document.createElement("td");
+const coluna_nome = document.createElement("td");
+const coluna_usuario = document.createElement("td");
+const coluna_painel = document.createElement("td");
+const coluna_servidor = document.createElement("td");
+
+// Pega o campo Id e troca o valor
+coluna_id.innerText = "2";
+
+linha.appendChild(coluna_id);
+
+// Pega o campo nome e troca o valor
+coluna_nome.innerText = "Wilson";
+linha.appendChild(coluna_nome);
+
+coluna_usuario.innerText = "192021";
+linha.appendChild(coluna_usuario);
+
+coluna_painel.innerText = "X-painel";
+linha.appendChild(coluna_painel);
+
+coluna_servidor.innerText = "Five";
+linha.appendChild(coluna_servidor);
+
+
+
+
+
+// Inserindo isso tudo dentro de uma linha tr
+listagem_usuarios.appendChild(linha);
+
+
 
 function menu_toggle_abrir () {
     btn_menu_abrir.style.display = "none";

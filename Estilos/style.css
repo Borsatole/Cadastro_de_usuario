@@ -7,11 +7,12 @@
 :root {
     --menu:#020f3b;
     --menufont1:#ffffff;
-    --hovercolor1:#ccccccb1;
+    --hovercolor1:#0066ffb1;
 
     --font1: 'Poppins', sans-serif;
     --font2: 'Roboto', sans-serif;
     --font3:'Open Sans', sans-serif;
+    
     --tamanho_menu_tela_grande:210px;
     --tamanho_menu_tela_pequena:70px;
 }
@@ -97,7 +98,7 @@ main .card span{
     display: none;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     margin-left: var(--tamanho_menu_tela_grande);
     width: calc(100% - var(--tamanho_menu_tela_grande));
