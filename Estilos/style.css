@@ -7,7 +7,7 @@
 :root {
     --menu:#020f3b;
     --menufont1:#ffffff;
-    --hovercolor1:#0066ffb1;
+    --hovercolor1:#01398e;
 
     --font1: 'Poppins', sans-serif;
     --font2: 'Roboto', sans-serif;
@@ -37,14 +37,14 @@ main {
 
 main .cards {
     display: flex;
+    justify-content: center;
     gap: 5px;
     padding: 10px;
     margin: auto;
     width: calc(98vw - var(--tamanho_menu_tela_grande));
     height: 250px;
     border-radius: 20px;
-    background-color: #80808043;
-    color: blue;
+    background-color: #d1d0d043;
     margin-bottom: 20px;
 }
 
@@ -56,7 +56,7 @@ main .card {
     align-items: center;
     color: var(--menufont1);
     border-radius: 20px;
-    width: 250px;
+    width: 260px;
     padding: 10px;
     box-shadow: 2px 3px 5px #000000ad;
 }
@@ -130,6 +130,10 @@ main .card span{
     transform: scale(1.3);
 }
 
+.formulariobg form .formulario {
+    padding: 30px;
+}
+
 /* TABELA */
 
 thead i {font-size: 1.0rem; margin-right: 10px;}
@@ -138,13 +142,13 @@ thead i {font-size: 1.0rem; margin-right: 10px;}
     font-size: 1.3rem;
     cursor: pointer;
     margin-right: 10px;
-    border-radius: 50%;
+    border-radius: 10px;
     padding: 5px;
 }
 
 .acoes .bx:hover {
-    background-color: var(--menu);
-    transition: 0.5s;
+    background-color: var(--hovercolor1);
+    transition: 0.9s;
     color: white;
 }
 
