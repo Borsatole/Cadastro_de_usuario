@@ -60,18 +60,19 @@
 
     @media (max-width: 1171px) {
 
-        .formulario {
-            padding: 0px;
-            gap:0px;
-        }
-        .formulario section img {
+        .img_destaque {
             display: none;
-    
+        }
+        .formulario {gap:0px}
+
+        .form_section {
+            display: flex;
+            width: 100%;
+            justify-content: center;
         }
 
-        .formulario section form {
+        .formulario .form_section form {
             width: 100%;
-            
         }
     }
 
