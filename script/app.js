@@ -21,27 +21,6 @@ function menu_toggle_fechar () {
 
 // Fim das funções do menu mobile
 
-// Botão: Cadastros > Adicionar usuario
-let btn_adicionar_usuario = document.getElementsByClassName('btn_add');
-
-// Formulario: Cadastros > Adicionar usuario
-let modal_cadastro_de_usuario = document.querySelector('.formulariobg');
-
-// Formulario: Cadastros > X Fechar
-let btn_fechar_modal = document.querySelector('.btn_fechar_formulario');
-
-    function createusuario() {
-    modal_cadastro_de_usuario.style.display = "flex";
-    console.log("botão adicionar usuario - foi clicado");
-
-    // Abaixo eu coloquei a função para fechar o menu! havia um bug quando ele eo formulario tavam aberto
-    menu_toggle_fechar ();
-}
-
-function fechar_modal() {
-    modal_cadastro_de_usuario.style.display = "none";
-    console.log("botão fechar modal - foi clicado");
-}
 
 
 

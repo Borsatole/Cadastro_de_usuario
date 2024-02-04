@@ -1,53 +1,111 @@
 
+// Botão: Cadastros > Adicionar usuario
+let btn_adicionar_usuario = document.getElementsByClassName('btn_add');
 
-// Codigo Adicionar Usuario
+// Formulario: Cadastros > Adicionar usuario
+let modal_cadastro_de_usuario = document.querySelector('.formulariobg');
 
-// Seleciona a tabela
+// Formulario: Cadastros > X Fechar
+let btn_fechar_modal = document.querySelector('.btn_fechar_formulario');
+
+    function createusuario() {
+    modal_cadastro_de_usuario.style.display = "flex";
+    console.log("botão adicionar usuario - foi clicado");
+
+    // Abaixo eu coloquei a função para fechar o menu! havia um bug quando ele eo formulario tavam aberto
+    menu_toggle_fechar ();
+}
+
+function fechar_modal() {
+    modal_cadastro_de_usuario.style.display = "none";
+    console.log("botão fechar modal - foi clicado");
+}
+
+function adicionar_usuario() {
+    
+    let id = "1"
+    let nome_usuario = "Francisco"
+    let login = 1232321
+    let painel = "X-painel"
+    let servidor = "Five"
+    let aplicativo = "Conectbox"
+    let status = "Ativo"
+    let expiracao = "28/12/2023"
+
+// ****SELECIONA A TABELA****
 let listagem_usuarios = document.getElementById('tabela_usuarios');
 
-// Cria a linha
+// ****CRIA A LINHA****
 const linha = document.createElement("tr");
 
-// cria as colunas
-const coluna_id = document.createElement("td");
-const coluna_nome = document.createElement("td");
-const coluna_usuario = document.createElement("td");
-const coluna_painel = document.createElement("td");
-const coluna_servidor = document.createElement("td");
-const coluna_aplicativo = document.createElement("td");
-const coluna_status = document.createElement("td");
-const coluna_expiracao = document.createElement("td");
 
 // PREEENCHE OS VALORES 
 
 // Pega o campo Id e troca o valor
-coluna_id.innerText = "2";
+const coluna_id = document.createElement("td");
+coluna_id.innerText = id;
+coluna_id.className = 'id';
 linha.appendChild(coluna_id);
 
 // Pega o campo nome e troca o valor
-coluna_nome.innerText = "Wilson";
+const coluna_nome = document.createElement("td");
+coluna_nome.innerText = nome_usuario;
 linha.appendChild(coluna_nome);
 
-coluna_usuario.innerText = "192021";
+const coluna_usuario = document.createElement("td");
+coluna_usuario.innerText = login;
 linha.appendChild(coluna_usuario);
 
-coluna_painel.innerText = "X-painel";
+const coluna_painel = document.createElement("td");
+coluna_painel.innerText = painel;
 linha.appendChild(coluna_painel);
 
-coluna_servidor.innerText = "Five";
+const coluna_servidor = document.createElement("td");
+coluna_servidor.innerText = servidor;
 linha.appendChild(coluna_servidor);
 
-coluna_aplicativo.innerText = "Conectbox";
+const coluna_aplicativo = document.createElement("td");
+coluna_aplicativo.innerText = aplicativo;
 linha.appendChild(coluna_aplicativo);
 
-coluna_status.innerText = "Ativo";
+const coluna_status = document.createElement("td");
+coluna_status.innerText = status;
 linha.appendChild(coluna_status);
 
-coluna_expiracao.innerText = "28/12/2023";
+const coluna_expiracao = document.createElement("td");
+coluna_expiracao.innerText = expiracao;
 linha.appendChild(coluna_expiracao);
 
 
+// ****SEÇÃO DE AÇÕES****
+
+const coluna_butns = document.createElement("td");
+coluna_butns.className = "acoes";
+
+// -Icone de renovação
+const iconeRenovacao = document.createElement("i");
+iconeRenovacao.className = "bx bx-revision";
+coluna_butns.appendChild(iconeRenovacao);
+
+// -Icone de Editar
+const iconeEditar = document.createElement("i");
+iconeEditar.className = "bx bx-slider-alt";
+coluna_butns.appendChild(iconeEditar);
+
+// -Icone de deletar
+const iconeDeletar = document.createElement("i");
+iconeDeletar.className = "bx bx-trash";
+iconeDeletar.onclick = function() {
+    excluir_usuario(linha);
+};
+coluna_butns.appendChild(iconeDeletar);
+
+linha.appendChild(coluna_butns);
+
 // Inserindo isso tudo dentro de uma linha tr
 listagem_usuarios.appendChild(linha);
+}
 
-
+function excluir_usuario(linha) {
+        linha.remove();
+}
