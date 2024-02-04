@@ -138,6 +138,13 @@ main .card span{
 
 thead i {font-size: 1.0rem; margin-right: 10px;}
 
+
+/* -Configurações de espaços na tabela */
+tbody td {min-width: 120px!important;}
+tbody .acoes {min-width: 145px!important;}
+tbody .id {min-width: 20px!important;} 
+
+
 .acoes .bx {
     font-size: 1.3rem;
     cursor: pointer;

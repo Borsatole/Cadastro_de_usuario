@@ -102,10 +102,20 @@ coluna_butns.appendChild(iconeDeletar);
 
 linha.appendChild(coluna_butns);
 
+// adicionando o novo usuario ao total de clientes
+let clientes_ativos = document.getElementById('clientes_ativos');
+clientes_ativos.innerText++;
+
+
 // Inserindo isso tudo dentro de uma linha tr
 listagem_usuarios.appendChild(linha);
+
 }
 
 function excluir_usuario(linha) {
         linha.remove();
+
+        // Removendo do total de clientes
+        let clientes_ativos = document.getElementById('clientes_ativos');
+        clientes_ativos.innerText--;
 }
