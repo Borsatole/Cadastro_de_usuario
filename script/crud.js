@@ -16,6 +16,8 @@ let btn_fechar_modal = document.querySelector('.btn_fechar_formulario');
     menu_toggle_fechar ();
 }
 
+createusuario()
+
 function fechar_modal() {
     modal_cadastro_de_usuario.style.display = "none";
     console.log("botão fechar modal - foi clicado");

@@ -33,7 +33,52 @@
     .menu_links span {display: none;}
     }
 
+    .formulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        
+    }
+    
+    .formulario section img {
+        max-width: 600px; 
+
+    }
+    
+    .formulario section form {
+        width: 400px;
+    }
+    
+    .formulario section form label {
+        margin-top: 5px;
+    }
+    
+    .formulario section form button {
+        margin-top: 20px;
+    }
+
+    @media (max-width: 1171px) {
+
+        .formulario {
+            padding: 0px;
+            gap:0px;
+        }
+        .formulario section img {
+            display: none;
+    
+        }
+
+        .formulario section form {
+            width: 100%;
+            
+        }
+    }
+
+
   @media (max-width: 768px) {
+
+    
 
     /* Controle de colunas na tabela */
     div.table {
@@ -101,6 +146,8 @@
             padding: 10px;
             
         }
+
+        
 
         
     
