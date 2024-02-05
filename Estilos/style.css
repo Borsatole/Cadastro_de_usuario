@@ -167,11 +167,12 @@ h1 {
     color: var(--menu);
 }
 
-.formulario .form_section form input {
+.formulario .form_section form input, #select_app {
     border-radius: 7px;
     padding: 5px;
     border: 1px solid var(--menu);
     outline: none;
+    color: rgb(37, 37, 37);
 }
 
 .formulario section form button {

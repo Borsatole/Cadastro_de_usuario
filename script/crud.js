@@ -7,6 +7,7 @@ let modal_cadastro_de_usuario = document.querySelector('.formulariobg');
 
 // Formulario: Cadastros > X Fechar
 let btn_fechar_modal = document.querySelector('.btn_fechar_formulario');
+createusuario()
 
     function createusuario() {
     modal_cadastro_de_usuario.style.display = "flex";
@@ -16,7 +17,7 @@ let btn_fechar_modal = document.querySelector('.btn_fechar_formulario');
     menu_toggle_fechar ();
 }
 
-createusuario()
+
 
 function fechar_modal() {
     modal_cadastro_de_usuario.style.display = "none";
@@ -24,7 +25,6 @@ function fechar_modal() {
 }
 
 function adicionar_usuario() {
-    
     let id = "1"
     let nome_usuario = "Francisco"
     let login = 1232321

@@ -23,6 +23,7 @@
             <div class="btn_fechar_formulario" onclick="fechar_modal()">
                 <i class='bx bx-x'></i>
             </div>
+            
             <h1>Cadastro de usuario</h1>
             <div class="formulario">
                 <section class="img_destaque">
@@ -32,31 +33,46 @@
                 <section class="form_section">
                     <form action="" autocomplete="off">
 
-                        <label for="id">id</label>
-                        <input type="text" id="id">
+                        <label for="usuario_id" >id</label>
+                        <input type="text" maxlength="5" id="usuario_id" required>
 
-                        <label for="id">Nome</label>
-                        <input type="text" id="id">
+                        <label for="usuario_nome">Nome</label required>
+                        <input type="text" id="usuario_nome">
 
-                        <label for="id">Usuario</label>
-                        <input type="text" id="id">
+                        <label for="usuario_login">Usuario</label required>
+                        <input type="text" id="usuario_login">
 
-                        <label for="id">Painel</label>
-                        <input type="text" id="id">
+                        <label for="usuario_painel">Painel</label>
+                        <select id="select_app" class="usuario_painel" required>
+                            <option value=""></option>
+                            <option value="1">X-Painel</option>
+                            <option value="2">Borsatole</option>
+                        </select>
 
-                        <label for="id">Servidor</label>
-                        <input type="text" id="id">
+                        <label for="usuario_server">Servidor</label>
+                        <select id="select_app" class="usuario_server" required>
+                            <option value=""></option>
+                            <option value="">Uniplay</option>
+                            <option value="">Zeusplay</option>
+                            <option value="">Five</option>
+                            <option value="">P2Cine</option>
+                        </select>
 
-                        <label for="id">Aplicativo</label>
-                        <input type="text" id="id">
+                        <label for="usuario_aplicativo">Aplicativo</label>
+                        <select id="select_app" class="usuario_aplicativo" required>
+                            <option value=""></option>
+                            <option value="">Conectbox</option>
+                            <option value="">Unitv</option>
+                            <option value="">Smart-Tv</option>
+                        </select>
 
-                        <label for="id">Status</label>
-                        <input type="text" id="id">
+                        <label for="usuario_telefone">Telefone</label>
+                        <input type="tel" maxlength="15" onkeyup="handlePhone(event)" id="usuario_telefone" required>
 
-                        <label for="id">Expiração</label>
-                        <input type="text" id="id">
+                        <label for="usuario_vencimento">Expiração</label>
+                        <input type="date" id="usuario_vencimento" required>
 
-                        <button class="btn_add">Cadastrar usuario</button>
+                        <button class="btn_add" onclick="adicionar_cliente ()"><i class='bx bx-user-plus'></i>Cadastrar usuario</button>
 
                     </form>
 
@@ -142,7 +158,7 @@
         </section>
 
         
-        <button class="btn_add" onclick="adicionar_usuario()"><i class='bx bxs-user' ></i>Adicionar usuario</button>
+        <button class="btn_add" id="btn_novo_usuario" onclick="createusuario()"><i class='bx bxs-user' ></i>Adicionar usuario</button>
 
 
         <div class="table">
@@ -162,7 +178,7 @@
 
                     <th class="aplicativo"><i class='bx bxl-play-store'></i>Aplicativo</th>
 
-                    <th class="status"><i class='bx bx-station bx-rotate-180' ></i>Status</th>
+                    <th class="telefone"><i class='bx bxs-user-rectangle' ></i>Telefone</th>
 
                     <th class="expiracao"><i class='bx bx-calendar'></i>Expiração</th>
 
@@ -202,7 +218,7 @@
 
     <script src="script/app.js"></script>
     <script src="script/crud.js"></script>
-    <script src="script/teste.js"></script>
+    <script src="script/crud2.js"></script>
 
 </body>
 </html>
