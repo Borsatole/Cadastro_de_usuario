@@ -7,7 +7,6 @@ let modal_cadastro_de_usuario = document.querySelector('.formulariobg');
 
 // Formulario: Cadastros > X Fechar
 let btn_fechar_modal = document.querySelector('.btn_fechar_formulario');
-createusuario()
 
     function createusuario() {
     modal_cadastro_de_usuario.style.display = "flex";

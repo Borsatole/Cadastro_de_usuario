@@ -5,7 +5,7 @@ let btn_add_usuario = document.getElementById('btn_novo_usuario');
 
 
 function adicionar_cliente () {
-    event.preventDefault();
+    // event.preventDefault();
 
 let input_id = document.getElementById('usuario_id');
 let input_nome = document.getElementById('usuario_nome');
@@ -36,7 +36,7 @@ let input_vencimento = document.getElementById('usuario_vencimento');
       
       if (todasVariaveisPreenchidas()) {
         console.log('Todas as variáveis estão preenchidas.');
-        var user = {
+        const user = {
             Id:input_id.value,
             nome: input_nome.value, 
             usuario: input_usuario.value,
@@ -46,11 +46,23 @@ let input_vencimento = document.getElementById('usuario_vencimento');
             telefone:input_telefone.value,
             expiracao:input_vencimento.value};
          
-            console.log(user)
+            
 
             // Aqui vamos armazenar no banco de dados
-            banco_de_dados.setItem("Usuarios", JSON.stringify(user) + banco_de_dados.getItem("Usuarios",""));
+            let localUsers =  banco_de_dados.getItem("Usuarios","");
 
+            if (!localUsers) {
+              banco_de_dados.setItem("Usuarios", JSON.stringify([user]));
+
+            } else {
+              const localUsersParse = JSON.parse(localUsers);
+              
+              localUsersParse.push(user);
+              
+              banco_de_dados.setItem("Usuarios", JSON.stringify(localUsersParse));
+            }
+
+            
             alert ("Usuario Cadastrado")
 
       } else {
